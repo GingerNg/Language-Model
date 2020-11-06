@@ -1,7 +1,7 @@
 import pickle
 
-def readFile(path):
-    with open(path, 'r', errors='ignore', encoding="gbk") as file:  # 文档中编码有些问题，所有用errors过滤错误
+def readFile(path, encoding="gbk"):
+    with open(path, 'r', errors='ignore', encoding=encoding) as file:  # 文档中编码有些问题，所有用errors过滤错误
         content = file.read()
         return content
 
